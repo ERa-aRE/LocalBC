@@ -3,10 +3,11 @@ package com.example.bluetoothchat.domain.chat
 import kotlinx.coroutines.flow.StateFlow
 
 interface BluetoothController {
-    val scannedDevices: StateFlow<List<BluetoothDeviceDomain>>
-    val pairedDevices: StateFlow<List<BluetoothDeviceDomain>>
+    val scannedDevices: StateFlow<List<BluetoothDevice>>
+    val pairedDevices: StateFlow<List<BluetoothDevice>>
 
     fun startDiscovery()
     fun stopDiscovery()
+
     fun release()
 }
